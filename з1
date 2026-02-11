@@ -1,0 +1,72 @@
+questions = [
+    {
+        "text": "What is 2 + 2?",
+        "options": ["67", "4", "5"],
+        "correct": "2"
+    },
+    {
+        "text": "Capital of France?",
+        "options": ["London", "67", "Paris"],
+        "correct": "3"
+    },
+    {
+        "text": "Color of grass?",
+        "options": ["Red", "Green", "67"],
+        "correct": "2"
+    },
+    {
+        "text": "Days in a week?",
+        "options": ["67", "6", "7"],
+        "correct": "3"
+    },
+    {
+        "text": "Planet closest to the Sun?",
+        "options": ["Vanus", "Mercury", "Mars"],
+        "correct": "2"
+    },
+    {
+        "text": "What is 10 - 3?",
+        "options": ["6", "7", "67"],
+        "correct": "2"
+    },
+    {
+        "text": "Programming language starting with 'P'?",
+        "options": ["Java", "67", "Python"],
+        "correct": "3"
+    },
+    {
+        "text": "Hours in a day?",
+        "options": ["420", "24", "67"],
+        "correct": "2"
+    },
+    {
+        "text": "will i beacome a programmer in the future?",
+        "options": ["yes", "no", "67"],
+        "correct": "3"
+    },
+    {
+        "text": "What is 5 * 2?",
+        "options": ["10", "67", "12"],
+        "correct": "1"
+    }
+]
+
+correct_count = 0
+
+for i in range(len(questions)):
+    print()
+    print("Question " + str(i + 1) + ": " + questions[i]["text"])
+    
+    for j in range(3):
+        print("  " + str(j + 1) + ". " + questions[i]["options"][j])
+    
+    answer = input("Your answer (1, 2 or 3): ")
+    
+    if answer == questions[i]["correct"]:
+        print("cool")
+        correct_count = correct_count + 1
+    else:
+        print("not cool")
+
+print()
+print("Test completed! Correct answers: " + str(correct_count) + " out of 10")
